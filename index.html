@@ -5,9 +5,52 @@
   </head>
   <body>
     <h1>Exemplo de Formulário</h1>
-    <form>
+
+    <!-- 
+
+      Elementos de formulário possibilitam o envio de dados ao servidor ou para um processamento.
+
+    !-->
+    <!-- 
+
+    <form> → elemento principal do formulário
+      Todo elemento enviado precisa estar dentro dessa tag
+      Podem haver vários forms numa página 
+      
+      Cada <form> deve possuir um atributo action e um method. 
+        O action é o endereço da página no servidor que recebe os dados, e o 
+        method é o método de envio de dados (GET ou POST).
+
+    !-->
+
+    <form action="" method="post" >
+
+      <!-- 
+
+      <label> →  rótulo para um elemento de formulário
+        O atributo for pode ser ligado ao id do elemento
+
+      !-->
+
+      <!--
+
+      <input> → elementos diversos de formulário, utilizados para entrada de dados.
+      Devem possuir os atributos name e id
+      name → nome do campo, utilizado no envio de dados (chave → valor)
+      id → identificação do elemento, por meio de JS, por exemplo
+      Há diversos tipos de <input>s, diferindo-se pelo atributo type:
+      type = “text”
+      type = “password'
+      type = “email”
+      type = “month”
+      type = “number”
+      type = “tel”
+      !-->
+
+
       <label for="nome">Nome:</label>
       <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
 
       <br><br>
 
@@ -32,7 +75,7 @@
       <br><br>
 
       <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
 
       <br><br>
 
@@ -61,7 +104,18 @@
 
       <br><br>
 
+
+      <!--
+      <button> → cria um botão
+        O atributo type do botão pode ser: 
+        button → executar uma ação, precisa ser programado por JS
+        submit → submete os dados do formulário
+        reset → limpa os campos do formulário
+
+      !-->
+
       <button type="submit">Enviar</button>
     </form>
   </body>
 </html>
+
